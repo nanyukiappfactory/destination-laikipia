@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DestinationLaikipia.Views.MenuPage"
+             BackgroundColor="#FFFFFF"
+             Title="Menu">
+    <StackLayout Orientation="Vertical">
+        <StackLayout>
+            <Image x:Name="thumbnail" Aspect="Fill"/>
+            <Label Text="Welcome to Laikipia County" FontSize="Default" Margin="55, 0, 0, 0"/>
+        </StackLayout>
+
+        <ListView x:Name="ListViewMenu" RowHeight="55" SeparatorVisibility="Default">
+            <ListView.ItemTemplate SelectedItemBackgroundColor="#FFFFFF">
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20, 4, 0, 10" Spacing="20">
+                            <Image Source="{Binding Icon}" WidthRequest="40" HeightRequest="40" VerticalOptions="Start"/>
+                            <Label Text="{Binding Title}" FontSize="Small" VerticalOptions="End" TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

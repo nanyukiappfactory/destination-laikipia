@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:DestinationLaikipia.Views"
+             x:Class=" DestinationLaikipia.Views.Wildlife"
+             Title="Wildlife">
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <ListView 
+              x:Name="Wildlifelist"
+              ItemsSource="{Binding wildlifes}"
+              HasUnevenRows="True"
+              SeparatorVisibility="Default"
+              >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextCell Text="{Binding HotelName}" TextColor="Black" Detail="{Binding HotelDescription}" DetailColor="Black" />-->
+                        <ImageCell Text="{Binding WildlifeName }"
+                                   Detail= "{Binding WildlifeDetails}"
+                                   DetailColor="Black" 
+                                   ImageSource="{Binding WildlifeImage}"
+                                   />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
