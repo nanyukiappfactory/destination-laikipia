@@ -31,7 +31,11 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image Source="ic_phone.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"/>
+                        <Image Source="ic_phone.png" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="TapPhone" NumberOfTapsRequired="1" Tapped="TapPhone_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Label Text="Phone.No" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
                     </Grid>
                     <Grid Grid.Row="0" Grid.Column="1">
@@ -42,8 +46,12 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image Source="ic_email.png" Grid.Row="1" Grid.Column="0"  VerticalOptions="Center"/>
-                        <Label Text="Date" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
+                        <Image Source="ic_email.png" Grid.Row="1" Grid.Column="0"  VerticalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="TapEmail" NumberOfTapsRequired="1" Tapped="TapEmail_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Email" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
                     </Grid>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>

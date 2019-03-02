@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DestinationLaikipia.Views.Investments"
+             Title="Investments">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView Margin="5" x:Name="LvBloodDonors" HasUnevenRows="True" ItemSelected="Invest_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.25*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding FullImagePath}" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" WidthRequest="80"/>
+                                <StackLayout Grid.Column="1" Margin="5, 5, 0, 0">
+                                    <Label Text="{Binding CompanyName}" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                                    <Label Text="{Binding Description}" VerticalOptions="Center" FontSize="14" TextColor="#2ecc71"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
